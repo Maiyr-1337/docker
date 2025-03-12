@@ -1,0 +1,11 @@
+services:
+  web:
+    # image: httpd
+    build:
+      context: .
+      dockerfile: web.dockerfile
+    ports:
+      - 6969:80
+    volumes:
+      - ./html:/usr/local/apache2/htdocs
+
